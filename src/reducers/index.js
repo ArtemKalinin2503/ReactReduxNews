@@ -28,9 +28,11 @@ const mainReducer = (state = initState, action) => {
                news: arrEditNews
             };  
         case "Action_Delete_News":
+            let arrDeleteNews = [...state.news];
+            arrDeleteNews.splice(action.index, 1);
             return {
                 ...state,
-               news: arrEditNews
+               news: arrDeleteNews
             };                   
         default:
             return state;       

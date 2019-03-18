@@ -30,10 +30,8 @@ class News extends Component {
 
     //Кнопка Удалить
     handleDeleteNews= () => {
-        let arrNews = this.props.news;
         let index = this.props.index;
-        arrNews.splice(index, 1);
-        store.dispatch(actionDeleteNews(arrNews));
+        store.dispatch(actionDeleteNews(index));
     };
 
     render() {
